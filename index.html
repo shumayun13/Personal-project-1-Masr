@@ -37,7 +37,7 @@ main{position:relative;z-index:1;max-width:900px;margin:auto;padding:50px 20px 8
   <div class="music-top"><div class="music-icon" aria-hidden="true">♫</div><div class="music-info"><strong>Helwa Ya Baladi · JadaL</strong><span>حلوة يا بلدي · A song for the night drive 🇪🇬</span></div></div>
   <div class="music-controls"><button type="button" class="btn" id="musicToggle" aria-controls="musicFrame" aria-expanded="false">▶ Play the song</button><button type="button" class="btn secondary" id="musicStop" hidden>■ Stop music</button></div>
   <div id="musicFrame" class="music-frame" hidden></div>
-  <p class="music-note">Music starts only when you choose. YouTube may show ads or ask you to press play. <a class="music-link" href="https://www.youtube.com/watch?v=iOhzVuDBRFQ" target="_blank" rel="noopener noreferrer">Listen directly on YouTube ↗</a></p>
+  <p class="music-note">Music starts only when you choose. YouTube may show ads or ask you to press play. <a class="music-link" href="https://www.youtube.com/watch?v=_bQBGeFmsc8&list=RD_bQBGeFmsc8&start_radio=1" target="_blank" rel="noopener noreferrer">Listen directly on YouTube ↗</a></p>
 </section>
 <section class="card" aria-label="A letter for Haya">
  <div id="closedLetter"><p class="hint">A letter is waiting for you. Tap the envelope to open it. ✉️</p><div class="envelope-holder"><button class="envelope" id="openButton" aria-label="Open your letter"><span class="seal">✦</span></button></div><div class="chocolate-box" aria-hidden="true"><span>🍫</span><span>🇪🇬</span><span>🍬</span></div><p class="hint">A small surprise, with care.</p></div>
@@ -66,7 +66,7 @@ surpriseButton.addEventListener('click',()=>{const expanded=surprise.classList.t
 
 const musicToggle=document.getElementById('musicToggle'),musicStop=document.getElementById('musicStop'),musicFrame=document.getElementById('musicFrame');
 function stopMusic(){musicFrame.replaceChildren();musicFrame.hidden=true;musicToggle.textContent='▶ Play the song';musicToggle.setAttribute('aria-expanded','false');musicStop.hidden=true}
-musicToggle.addEventListener('click',()=>{if(!musicFrame.hidden){stopMusic();return}const player=document.createElement('iframe');player.src='https://www.youtube-nocookie.com/embed/iOhzVuDBRFQ?autoplay=1&rel=0';player.title='Helwa Ya Baladi by JadaL — YouTube player';player.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';player.allowFullscreen=true;player.referrerPolicy='strict-origin-when-cross-origin';musicFrame.replaceChildren(player);musicFrame.hidden=false;musicToggle.textContent='♫ Hide player';musicToggle.setAttribute('aria-expanded','true');musicStop.hidden=false});
+musicToggle.addEventListener('click',()=>{if(!musicFrame.hidden){stopMusic();return}const player=document.createElement('iframe');player.src='https://www.youtube.com/watch?v=_bQBGeFmsc8&list=RD_bQBGeFmsc8&start_radio=1';player.title='Helwa Ya Baladi by JadaL — YouTube player';player.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';player.allowFullscreen=true;player.referrerPolicy='strict-origin-when-cross-origin';musicFrame.replaceChildren(player);musicFrame.hidden=false;musicToggle.textContent='♫ Hide player';musicToggle.setAttribute('aria-expanded','true');musicStop.hidden=false});
 musicStop.addEventListener('click',stopMusic);
 </script>
 </body></html>
